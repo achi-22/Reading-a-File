@@ -41,5 +41,8 @@ namespace Reading_a_File
         {
             DisplayToList();
         }
+
+        private void lvShowText_SelectedIndexChanged(object sender, EventArgs e)
+        { }
     }
 }
