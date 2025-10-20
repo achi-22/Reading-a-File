@@ -31,14 +31,16 @@
             this.btnOpen = new System.Windows.Forms.Button();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.lvShowText = new System.Windows.Forms.ListView();
+            this.VR = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnOpen
             // 
             this.btnOpen.BackColor = System.Drawing.Color.Chocolate;
-            this.btnOpen.Location = new System.Drawing.Point(172, 243);
+            this.btnOpen.Location = new System.Drawing.Point(229, 299);
+            this.btnOpen.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnOpen.Name = "btnOpen";
-            this.btnOpen.Size = new System.Drawing.Size(75, 23);
+            this.btnOpen.Size = new System.Drawing.Size(100, 28);
             this.btnOpen.TabIndex = 1;
             this.btnOpen.Text = "Open";
             this.btnOpen.UseVisualStyleBackColor = false;
@@ -51,23 +53,38 @@
             // lvShowText
             // 
             this.lvShowText.HideSelection = false;
-            this.lvShowText.Location = new System.Drawing.Point(12, 12);
+            this.lvShowText.Location = new System.Drawing.Point(16, 15);
+            this.lvShowText.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.lvShowText.Name = "lvShowText";
-            this.lvShowText.Size = new System.Drawing.Size(392, 225);
+            this.lvShowText.Size = new System.Drawing.Size(521, 276);
             this.lvShowText.TabIndex = 2;
             this.lvShowText.UseCompatibleStateImageBehavior = false;
             this.lvShowText.View = System.Windows.Forms.View.List;
             // 
+            // VR
+            // 
+            this.VR.BackColor = System.Drawing.Color.Chocolate;
+            this.VR.Location = new System.Drawing.Point(211, 334);
+            this.VR.Name = "VR";
+            this.VR.Size = new System.Drawing.Size(134, 32);
+            this.VR.TabIndex = 3;
+            this.VR.Text = "View record";
+            this.VR.UseVisualStyleBackColor = false;
+            this.VR.Click += new System.EventHandler(this.VR_Click);
+            // 
             // FrmOpenTextFile
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Sienna;
-            this.ClientSize = new System.Drawing.Size(416, 307);
+            this.ClientSize = new System.Drawing.Size(555, 378);
+            this.Controls.Add(this.VR);
             this.Controls.Add(this.lvShowText);
             this.Controls.Add(this.btnOpen);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "FrmOpenTextFile";
             this.Text = "FrmOpenFile";
+            this.Load += new System.EventHandler(this.FrmOpenTextFile_Load);
             this.ResumeLayout(false);
 
         }
@@ -76,6 +93,7 @@
         private System.Windows.Forms.Button btnOpen;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
         private System.Windows.Forms.ListView lvShowText;
+        private System.Windows.Forms.Button VR;
     }
 }
 

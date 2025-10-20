@@ -44,5 +44,15 @@ namespace Reading_a_File
 
         private void lvShowText_SelectedIndexChanged(object sender, EventArgs e)
         { }
+
+        private void FrmOpenTextFile_Load(object sender, EventArgs e)
+        { }
+
+        private void VR_Click(object sender, EventArgs e)
+        {
+            FrmFileName fileName = new FrmFileName();
+            fileName.Show();
+            this.Hide();
+        }
     }
 }
