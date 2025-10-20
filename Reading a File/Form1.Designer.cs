@@ -1,6 +1,6 @@
 ﻿namespace Reading_a_File
 {
-    partial class Form1
+    partial class FrmOpenTextFile
     {
         /// <summary>
         /// Required designer variable.
@@ -28,20 +28,53 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.lvShowText = new System.Windows.Forms.ListBox();
+            this.btnOpen = new System.Windows.Forms.Button();
+            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.SuspendLayout();
             // 
-            // Form1
+            // lvShowText
+            // 
+            this.lvShowText.FormattingEnabled = true;
+            this.lvShowText.Location = new System.Drawing.Point(12, 12);
+            this.lvShowText.Name = "lvShowText";
+            this.lvShowText.Size = new System.Drawing.Size(392, 225);
+            this.lvShowText.TabIndex = 0;
+            // 
+            // btnOpen
+            // 
+            this.btnOpen.BackColor = System.Drawing.Color.Chocolate;
+            this.btnOpen.Location = new System.Drawing.Point(172, 243);
+            this.btnOpen.Name = "btnOpen";
+            this.btnOpen.Size = new System.Drawing.Size(75, 23);
+            this.btnOpen.TabIndex = 1;
+            this.btnOpen.Text = "Open";
+            this.btnOpen.UseVisualStyleBackColor = false;
+            this.btnOpen.Click += new System.EventHandler(this.btnOpen_Click);
+            // 
+            // openFileDialog1
+            // 
+            this.openFileDialog1.FileName = "openFileDialog1";
+            // 
+            // FrmOpenTextFile
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(464, 391);
-            this.Name = "Form1";
-            this.Text = "Form1";
+            this.BackColor = System.Drawing.Color.Sienna;
+            this.ClientSize = new System.Drawing.Size(416, 307);
+            this.Controls.Add(this.btnOpen);
+            this.Controls.Add(this.lvShowText);
+            this.Name = "FrmOpenTextFile";
+            this.Text = "FrmOpenFile";
             this.ResumeLayout(false);
 
         }
 
         #endregion
+
+        private System.Windows.Forms.ListBox lvShowText;
+        private System.Windows.Forms.Button btnOpen;
+        private System.Windows.Forms.OpenFileDialog openFileDialog1;
     }
 }
 
